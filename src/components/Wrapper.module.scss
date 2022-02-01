@@ -1,0 +1,15 @@
+@import "../styles/_variables.scss";
+
+.wrapper {
+  background-color: $white;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  max-width: 45rem;
+  min-height: 10rem;
+  border-radius: 20px 20px 0 0;
+
+  @media (min-width: 40rem) {
+    border-radius: 20px;
+  }
+}
