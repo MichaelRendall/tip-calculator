@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./components/Input";
 import Wrapper from "./components/Wrapper";
 
 const App: React.FC = () => {
@@ -9,7 +10,9 @@ const App: React.FC = () => {
         <br />
         TTER
       </h1>
-      <Wrapper />
+      <Wrapper>
+        <Input type="number" label="Bill" icon="dollar" name="bill" />
+      </Wrapper>
     </div>
   );
 };
