@@ -10,6 +10,7 @@ interface InputProps {
   icon?: string;
   placeholder?: string;
   inputOnly?: boolean;
+  change: (value: number) => void;
 }
 
 const Input: React.FC<InputProps> = (props) => {
@@ -37,6 +38,7 @@ const Input: React.FC<InputProps> = (props) => {
           type={props.type}
           name={props.name}
           placeholder={props.placeholder}
+          onChange={(e) => props.change(+e.target.value)}
         />
       </span>
     </span>

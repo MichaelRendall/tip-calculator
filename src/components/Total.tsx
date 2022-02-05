@@ -13,7 +13,7 @@ const Total: React.FC<TotalProps> = (props) => {
         <p>{props.text}</p>
         <small>/ person</small>
       </span>
-      <strong>&#36;{props.figure}</strong>
+      <strong>&#36;{props.figure.toFixed(2)}</strong>
     </div>
   );
 };

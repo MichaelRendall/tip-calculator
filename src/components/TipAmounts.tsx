@@ -3,7 +3,11 @@ import Button from "./Button";
 import Input from "./Input";
 import classes from "./TipAmounts.module.scss";
 
-const TipAmounts = () => {
+interface TipAmountsProps {
+  change: (value: number) => void;
+}
+
+const TipAmounts: React.FC<TipAmountsProps> = (props) => {
   const TIP_AMOUNTS = [
     { id: "ta1", text: "5", type: "button" },
     { id: "ta2", text: "10", type: "button" },
@@ -18,7 +22,13 @@ const TipAmounts = () => {
       <div className={classes.TipContainer}>
         {TIP_AMOUNTS.map((Tip) => {
           if (Tip.type === "button") {
-            return <Button key={Tip.id} text={`${Tip.text}%`} />;
+            return (
+              <Button
+                key={Tip.id}
+                text={`${Tip.text}%`}
+                clicked={() => props.change(+Tip.text)}
+              />
+            );
           }
           return (
             <Input
@@ -27,6 +37,7 @@ const TipAmounts = () => {
               name={Tip.text}
               placeholder={Tip.text}
               inputOnly
+              change={props.change}
             />
           );
         })}
