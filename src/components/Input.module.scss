@@ -7,11 +7,6 @@
   width: 100%;
 }
 
-label {
-  color: $dark-gray-cyan2;
-  font-weight: 700;
-}
-
 .input {
   position: relative;
   display: flex;
@@ -20,17 +15,5 @@ label {
   .icon {
     position: absolute;
     left: 1rem;
-  }
-
-  input {
-    width: 100%;
-    text-align: right;
-    background-color: $light-gray-cyan2;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    color: $dark-cyan;
-    font-weight: 700;
-    font-size: 1.75rem;
   }
 }

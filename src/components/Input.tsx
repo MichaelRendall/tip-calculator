@@ -5,22 +5,39 @@ import personIcon from "../assets/icon-person.svg";
 
 interface InputProps {
   type: string;
-  label: string;
-  icon: string;
   name: string;
+  label?: string;
+  icon?: string;
+  placeholder?: string;
+  inputOnly?: boolean;
 }
 
 const Input: React.FC<InputProps> = (props) => {
+  if (props.inputOnly) {
+    return (
+      <input
+        type={props.type}
+        name={props.name}
+        placeholder={props.placeholder}
+      />
+    );
+  }
   return (
     <span className={classes.input_container}>
       <label htmlFor={props.name}>{props.label}</label>
       <span className={classes.input}>
-        <img
-          className={classes.icon}
-          src={props.icon === "dollar" ? dollarIcon : personIcon}
-          alt="Input icon"
+        {props.icon && (
+          <img
+            className={classes.icon}
+            src={props.icon === "dollar" ? dollarIcon : personIcon}
+            alt="Input icon"
+          />
+        )}
+        <input
+          type={props.type}
+          name={props.name}
+          placeholder={props.placeholder}
         />
-        <input type={props.type} name={props.name} />
       </span>
     </span>
   );

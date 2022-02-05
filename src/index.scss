@@ -12,9 +12,33 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
+.logo {
+  display: flex;
+  margin: 3rem auto;
+}
+
+label,
+p {
+  color: $dark-gray-cyan2;
+  font-weight: 700;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  text-align: right;
+  background-color: $light-gray-cyan2;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   color: $dark-cyan;
-  margin: 3rem 0;
-  letter-spacing: 0.4rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
