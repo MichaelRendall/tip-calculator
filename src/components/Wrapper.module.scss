@@ -26,10 +26,9 @@
     gap: 2rem;
   }
 
-  .wrapper__inner_left {
-  }
-
   .wrapper__inner_right {
     background-color: $dark-cyan;
+    padding: 2rem;
+    justify-content: space-evenly;
   }
 }

@@ -1,0 +1,17 @@
+@import "../styles/_variables.scss";
+
+.Total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: $white;
+  }
+
+  small {
+    color: $dark-gray-cyan2;
+    font-weight: 700;
+  }
+}

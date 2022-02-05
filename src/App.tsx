@@ -1,8 +1,10 @@
 import React from "react";
 import Input from "./components/Input";
+import Button from "./components/Button";
 import Wrapper from "./components/Wrapper";
 import logo from "./assets/logo.svg";
 import TipAmounts from "./components/TipAmounts";
+import Total from "./components/Total";
 
 const App: React.FC = () => {
   return (
@@ -20,7 +22,9 @@ const App: React.FC = () => {
           />
         </Wrapper>
         <Wrapper class="wrapper__inner_right">
-          <p>Tip Amount</p>
+          <Total text="Tip Amount" figure={10.56} />
+          <Total text="Total" figure={40.56} />
+          <Button text="RESET" class="main" />
         </Wrapper>
       </Wrapper>
     </div>

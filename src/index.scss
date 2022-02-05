@@ -41,4 +41,17 @@ input {
     -webkit-appearance: none;
     margin: 0;
   }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $cyan;
+  }
+}
+
+strong {
+  color: $cyan;
+  font-size: 1.75rem;
+  @media (min-width: 40rem) {
+    font-size: 3rem;
+  }
 }

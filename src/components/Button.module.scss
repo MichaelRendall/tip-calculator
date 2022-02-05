@@ -8,4 +8,25 @@
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0.5rem 1rem;
+
+  &:hover {
+    background-color: $hover;
+    color: $dark-cyan;
+    cursor: pointer;
+  }
+}
+
+.active,
+.main {
+  background-color: $cyan;
+  color: $dark-cyan;
+}
+
+.main {
+  font-size: 1.25rem;
+}
+
+.disabled {
+  cursor: not-allowed;
+  background-color: $dark-gray-cyan1;
 }
