@@ -26,6 +26,12 @@ const App: React.FC = () => {
     tipCtx.setPeople!(value);
   };
 
+  const onResetHandler = () => {
+    tipCtx.setBill!(0);
+    tipCtx.setTipPercent!(0);
+    tipCtx.setPeople!(0);
+  };
+
   return (
     <div className="App">
       <img className="logo" src={logo} alt="SPLITTER Logo" />
@@ -36,6 +42,7 @@ const App: React.FC = () => {
             label="Bill"
             icon="dollar"
             name="bill"
+            value={tipCtx.bill!}
             change={onChangeBillHandler}
           />
           <TipAmounts change={onChangeTipAmountsHandler} />
@@ -44,13 +51,14 @@ const App: React.FC = () => {
             label="Number of People"
             icon="person"
             name="people"
+            value={tipCtx.people!}
             change={onChangePeopleHandler}
           />
         </Wrapper>
         <Wrapper class="wrapper__inner_right">
           <Total text="Tip Amount" figure={+tip} />
           <Total text="Total" figure={+total} />
-          <Button text="RESET" class="main" clicked={() => {}} />
+          <Button text="RESET" class="main" clicked={onResetHandler} />
         </Wrapper>
       </Wrapper>
     </div>

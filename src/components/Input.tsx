@@ -5,6 +5,7 @@ import personIcon from "../assets/icon-person.svg";
 
 interface InputProps {
   type: string;
+  value?: number;
   name: string;
   label?: string;
   icon?: string;
@@ -20,6 +21,8 @@ const Input: React.FC<InputProps> = (props) => {
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
+        onChange={(e) => props.change(+e.target.value)}
+        value={props.value}
       />
     );
   }
@@ -39,6 +42,7 @@ const Input: React.FC<InputProps> = (props) => {
           name={props.name}
           placeholder={props.placeholder}
           onChange={(e) => props.change(+e.target.value)}
+          value={props.value}
         />
       </span>
     </span>
